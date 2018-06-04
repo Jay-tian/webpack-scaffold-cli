@@ -1,0 +1,20 @@
+{
+  "name": "webpack-scaffold-cli",
+  "version": "1.0.1",
+  "description": "A simple CLI for scaffolding webpack4 projects. 一秒初始化webpack4项目",
+  "main": "index.js",
+  "repository": "https://github.com/Jay-tian/webpack-scaffold-cli.git",
+  "author": "tianshengjie <tianshengjie@howzhi.com>",
+  "license": "MIT",
+  "bin": {
+    "jay-webpack": "bin/init.js"
+  },
+  "engines": {
+    "node": ">=6.11.5"
+  },
+  "dependencies": {
+    "commander": "^2.15.1",
+    "shelljs": "^0.8.2",
+    "simple-git": "^1.95.1"
+  }
+}
