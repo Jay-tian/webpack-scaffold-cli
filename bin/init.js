@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const program = require('commander')
 const shell = require('shelljs');
-const fs = require('fs');
+const fs = require('fs-extra');
 const git =  require('simple-git')();
 const process = require('process');
 const path = require('path');
@@ -18,7 +18,8 @@ program
         if (!exists) {
         console.log(`开始初始化项目`);
         git.clone('https://github.com/Jay-tian/webpack-scaffold-demo.git', path.join(rootPath, dir), function(){
-            console.log(`项目初始化完成`);
+            fs.removeSync(path.join(rootPath, dir+'/.git/'));
+            console.log(`初始化项目成功`);
         })      
         } else {
             console.error(dir+` 项目已经存在`);
